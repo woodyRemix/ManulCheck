@@ -1,0 +1,27 @@
+name: ManulCheck
+version: ${project.version}
+main: ru.manulcraft.check.ManulCheck
+api-version: '1.21'
+author: vudiRemix
+description: Заморозка игрока на проверку на читы
+softdepend: [ViaVersion, LiteBans]
+commands:
+  check:
+    description: Вызвать игрока на проверку
+    usage: /check <ник> | stop <ник> | ban <ник> | info <ник> | list | reload
+    aliases: [проверка, freeze, ss]
+    permission: manulcheck.use
+  cc:
+    description: Написать игроку на проверке
+    usage: /cc [ник] <текст>
+    permission: manulcheck.use
+permissions:
+  manulcheck.use:
+    description: Морозить игроков и вести проверку
+    default: op
+  manulcheck.spy:
+    description: Видеть чат всех проверок и подозрительные клиенты при входе
+    default: op
+  manulcheck.bypass:
+    description: Нельзя вызвать на проверку
+    default: false

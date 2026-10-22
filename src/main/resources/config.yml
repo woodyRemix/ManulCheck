@@ -1,0 +1,42 @@
+quit-ban:
+  enabled: true
+  # Команда от консоли. {player} — ник, {checker} — кто проверял.
+  command: "litebans:ban {player} 30d Выход с сервера во время проверки на читы"
+
+manual-ban:
+  command: "litebans:ban {player} 30d Читы (проверка, проверял {checker})"
+
+allowed-commands: []
+
+reminder-interval: 5
+
+messages:
+  prefix: "&8[&cПроверка&8] &r"
+  title: "&cВЫ НА ПРОВЕРКЕ"
+  subtitle: "&eНе выходите с сервера, иначе бан"
+  reminder:
+    - "&cВас вызвали на проверку на читы."
+    - "&fНапишите в чат свой &eDiscord&f, проверяющий пришлёт ссылку и попросит включить демонстрацию экрана."
+    - "&fЕсли используете AnyDesk/RustDesk, приготовьте ID."
+    - "&cВыход с сервера, отказ или удаление файлов = бан на 30 дней."
+  bossbar: "&cПроверка на читы &7| &f{time} &7| проверяет &e{checker}"
+  frozen-staff: "&a{player} заморожен. Пишите ему: &e/cc <текст>&a. Снять: &e/check stop {player}"
+  released: "&aПроверка окончена, вы свободны. Спасибо за терпение!"
+  released-staff: "&a{player} отпущен."
+  quit-staff: "&c{player} вышел во время проверки ({checker}), выдан бан."
+  chat-from-target: "&8[&cПроверка&8] &e{player}&7: &f{message}"
+  chat-from-checker: "&8[&cПроверка&8] &c{checker} &7→ &e{player}&7: &f{message}"
+  command-blocked: "&cНа проверке команды недоступны. Пишите в чат, вас видит проверяющий."
+  not-online: "&cИгрок не в сети."
+  already: "&cИгрок уже на проверке у {checker}."
+  not-frozen: "&cИгрок не на проверке."
+  bypass: "&cЭтого игрока нельзя вызвать на проверку."
+  no-target: "&cУточните ник: /cc <ник> <текст>"
+
+suspicious:
+  enabled: true
+  brands: [meteor, wurst, aristois, liquidbounce, impact, inertia, future, rusherhack, thunderhack, nursultan,
+           celestial, expensive, wexside, akrien, deadcode, minced, wild, rockstar, excellent, bleachhack, coffee,
+           prestige, boze, xenon, sigma, vape, novoline]
+  channels: [meteor, wurst, aristois, liquidbounce, inertia, rusherhack, thunderhack, bleachhack, baritone,
+             freecam, xray, autoclicker, killaura, boze, nursultan, celestial, expensive]
